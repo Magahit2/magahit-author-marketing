@@ -182,7 +182,7 @@ const PLACEHOLDER_TESTIMONIALS = [
 export function TestimonialCarousel() {
   const [i, setI] = useState(0);
   const total = PLACEHOLDER_TESTIMONIALS.length;
-  const t = PLACEHOLDER_TESTIMONIALS[i];
+  const t = PLACEHOLDER_TESTIMONIALS[i]!;
 
   return (
     <div className="mx-auto max-w-3xl text-center">
