@@ -1,0 +1,417 @@
+export const BRAND = {
+  name: "Magahit Author Marketing",
+  short: "Magahit",
+  tagline: "Helping authors turn great books into discoverable brands.",
+  email: "hello@magahit.com",
+  phone: "+1 (555) 014-2280",
+  location: "Remote — working with authors worldwide",
+};
+
+export const NAV = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Results", to: "/results" },
+  { label: "Resources", to: "/resources" },
+  { label: "Pricing", to: "/pricing" },
+] as const;
+
+export const METHOD = [
+  {
+    step: "01",
+    title: "Discover",
+    body: "Research the book, genre, audience, competitors, keywords, categories, and market opportunities.",
+  },
+  {
+    step: "02",
+    title: "Position",
+    body: "Define how the book and the author should be presented to the right audience.",
+  },
+  {
+    step: "03",
+    title: "Attract",
+    body: "Use content, reader outreach, platforms, partnerships, and targeted campaigns to attract attention.",
+  },
+  {
+    step: "04",
+    title: "Convert",
+    body: "Improve the assets that turn attention into readers and buyers.",
+  },
+  {
+    step: "05",
+    title: "Grow",
+    body: "Build systems that continue supporting the author beyond a single promotional campaign.",
+  },
+];
+
+export const HOME_SERVICES = [
+  {
+    title: "Book Discoverability",
+    body: "Amazon keywords, categories, Goodreads visibility, reader targeting, and strategic outreach.",
+    to: "/book-marketing",
+  },
+  {
+    title: "Amazon Optimization",
+    body: "Book descriptions, metadata, A+ Content, conversion optimization, and listing strategy.",
+    to: "/amazon-optimization",
+  },
+  {
+    title: "Author Brand Development",
+    body: "Author positioning, messaging, content strategy, social presence, and audience development.",
+    to: "/author-brand",
+  },
+  {
+    title: "Book Launch Strategy",
+    body: "Pre-launch campaigns, advance reader strategy, launch-week momentum, and post-launch promotion.",
+    to: "/book-launch",
+  },
+  {
+    title: "Reader & Audience Growth",
+    body: "Email lists, newsletters, reader communities, social content, and long-term engagement.",
+    to: "/author-brand",
+  },
+  {
+    title: "Paid Campaign Management",
+    body: "Amazon Ads, Meta campaigns, targeting strategy, optimization, and campaign management.",
+    to: "/services",
+  },
+] as const;
+
+export const SERVICE_GROUPS = [
+  {
+    id: "discovery",
+    label: "Discovery",
+    intro: "Get the book in front of more of the right readers.",
+    items: [
+      ["Amazon Keyword Optimization", "Research the search terms real readers use in your genre and map them to your metadata."],
+      ["Amazon Category Research", "Identify relevant, competitive categories where your book has a genuine chance of visibility."],
+      ["Goodreads Marketing", "Build presence where readers browse, shelve, and discuss books before they buy."],
+      ["Goodreads Listopia Strategy", "Position your title alongside comparable books readers already trust."],
+      ["Book Blogger Outreach", "Personalised outreach to reviewers and bloggers who cover your genre."],
+      ["Reader Outreach", "Targeted introductions to reader communities aligned with your story."],
+      ["Podcast Outreach", "Pitch you to shows whose audiences overlap with your ideal reader."],
+      ["Book Club Outreach", "Place discussion-friendly titles in front of active reading groups."],
+    ],
+  },
+  {
+    id: "conversion",
+    label: "Conversion",
+    intro: "Turn interested readers into buyers.",
+    items: [
+      ["Amazon Book Description Optimization", "Rewrite your description as persuasive, genre-aware sales copy."],
+      ["A+ Content", "Design visual modules that support the buying decision on your detail page."],
+      ["Amazon Listing Enhancement", "Align title, subtitle, series data, and back-end fields into one coherent listing."],
+      ["Sales Page Optimization", "Improve your own site's book page so traffic you earn actually converts."],
+      ["Social Proof Strategy", "Present genuine reviews, endorsements, and reader reactions where they matter most."],
+    ],
+  },
+  {
+    id: "audience",
+    label: "Audience",
+    intro: "Build an audience that supports current and future books.",
+    items: [
+      ["Social Media Strategy", "A realistic platform plan built around the readers you actually want."],
+      ["Content Strategy", "Content pillars and formats you can sustain between books."],
+      ["Email Newsletter Setup", "Reader list infrastructure, welcome sequences, and sending rhythm."],
+      ["Reader Community Development", "Turn readers into a community that returns for the next release."],
+      ["Lead Magnet Strategy", "Reader magnets that attract the right subscribers, not just any subscribers."],
+    ],
+  },
+  {
+    id: "author-brand",
+    label: "Author Brand",
+    intro: "Define the business behind the book.",
+    items: [
+      ["Author Positioning", "Clarify what you are known for and who you are for."],
+      ["Author Brand Development", "Visual and verbal identity that reads as professional to readers and partners."],
+      ["Messaging", "Consistent language across your bio, site, listings, and pitches."],
+      ["Content Pillars", "Three to five themes that make your presence recognisable."],
+      ["Social Brand Strategy", "How your brand shows up, post by post, without burning you out."],
+    ],
+  },
+  {
+    id: "launch",
+    label: "Launch",
+    intro: "Build momentum before launch day, not after it.",
+    items: [
+      ["Pre-Launch Campaigns", "Audience warm-up, positioning, and asset preparation in the months before release."],
+      ["ARC Strategy", "Ethical advance reader programmes that encourage honest reviews."],
+      ["Launch Campaigns", "Coordinated promotion across email, social, outreach, and advertising."],
+      ["Launch Week Strategy", "A day-by-day plan so nothing depends on improvisation."],
+      ["Post-Launch Promotion", "Sustain discoverability once launch-week attention fades."],
+    ],
+  },
+  {
+    id: "paid",
+    label: "Paid Marketing",
+    intro: "Disciplined spend, measured against real outcomes.",
+    items: [
+      ["Amazon Ads", "Keyword, product, and category targeting structured for your genre."],
+      ["Meta Ads", "Audience testing and creative built for reader intent, not vanity clicks."],
+      ["Campaign Strategy", "Budget structure, testing plan, and success criteria agreed in advance."],
+      ["Campaign Management", "Ongoing monitoring, bid management, and reporting."],
+      ["Optimization", "Regular pruning, scaling, and creative iteration based on data."],
+    ],
+  },
+];
+
+export const PACKAGES = [
+  {
+    name: "Starter",
+    price: "$497",
+    tagline: "For authors who need a focused marketing foundation.",
+    who: "First-time and self-published authors who want their book set up correctly before spending on promotion.",
+    timeline: "3–4 weeks",
+    features: [
+      "Book & genre positioning review",
+      "Amazon keyword research",
+      "Amazon category research",
+      "Book description rewrite",
+      "Metadata recommendations",
+      "Reader profile summary",
+      "30-day action plan",
+    ],
+    featured: false,
+  },
+  {
+    name: "Growth Accelerator",
+    price: "$797",
+    tagline: "For authors ready to expand their visibility and audience.",
+    who: "Authors with a published book who need consistent discoverability and a growing reader list.",
+    timeline: "6–8 weeks",
+    features: [
+      "Everything in Starter",
+      "Goodreads visibility strategy",
+      "Book blogger & reviewer outreach",
+      "A+ Content plan",
+      "Email newsletter setup",
+      "Lead magnet strategy",
+      "Social content framework",
+      "Performance review call",
+    ],
+    featured: true,
+  },
+  {
+    name: "Author Brand & Sales Domination",
+    price: "$1,200",
+    tagline: "For authors who want a more comprehensive author-growth system.",
+    who: "Established authors and series writers building a long-term platform, not a single campaign.",
+    timeline: "10–12 weeks",
+    features: [
+      "Everything in Growth Accelerator",
+      "Full author brand development",
+      "Content pillars & messaging guide",
+      "Launch or relaunch campaign plan",
+      "Amazon Ads setup & management",
+      "Meta campaign strategy",
+      "Reader community development",
+      "Monthly reporting & strategy calls",
+    ],
+    featured: false,
+  },
+  {
+    name: "Custom Strategy",
+    price: "Custom",
+    tagline: "For authors who need a campaign tailored to their specific goals.",
+    who: "Multi-book authors, hybrid publishers, and authors with unusual timelines or markets.",
+    timeline: "Scoped together",
+    features: [
+      "Scoped after a book audit",
+      "Choose the disciplines you need",
+      "Flexible engagement length",
+      "Dedicated strategist",
+      "Custom reporting cadence",
+    ],
+    featured: false,
+  },
+];
+
+export const COMPARISON = [
+  ["Book & genre positioning", true, true, true],
+  ["Amazon keywords & categories", true, true, true],
+  ["Book description rewrite", true, true, true],
+  ["Goodreads strategy", false, true, true],
+  ["Reviewer & blogger outreach", false, true, true],
+  ["Email list & lead magnet", false, true, true],
+  ["Author brand development", false, false, true],
+  ["Launch campaign plan", false, false, true],
+  ["Paid campaign management", false, false, true],
+  ["Ongoing reporting calls", false, "One review call", "Monthly"],
+] as const;
+
+export const HOME_FAQS = [
+  ["What exactly does Magahit Author Marketing do?", "We work on the system around your book: discoverability, positioning, marketing assets, reader outreach, and audience growth. That means research first, then strategy, then execution and optimisation — not one-off promotion."],
+  ["Who do you work with?", "Fiction and nonfiction authors at every stage: first-time, self-published, indie, and established authors, including those preparing a new release."],
+  ["Do you work with self-published authors?", "Yes. Most of our work is with self-published and indie authors who own their metadata, listings, and marketing decisions."],
+  ["What genres do you work with?", "Romance, thriller, mystery, fantasy, literary fiction, and a wide range of nonfiction. If your genre is outside our experience, we will tell you before you commit."],
+  ["Can you market an already-published book?", "Yes. Backlist and previously published titles are often the fastest place to improve, because the book already has reviews and history to build on."],
+  ["Do you help with book launches?", "Yes — from 60-day pre-launch planning through launch week and post-launch discoverability."],
+  ["Do you provide Amazon optimization?", "Yes: keywords, categories, metadata, description copy, A+ Content planning, and competitive research."],
+  ["Do you manage advertising campaigns?", "Yes. We run Amazon Ads and Meta campaigns with agreed budgets, testing plans, and transparent reporting."],
+  ["Do you guarantee book sales?", "No. No honest agency can guarantee sales, rankings, reviews, or bestseller status. We guarantee the work, the strategy, the reporting, and the transparency — not marketplace outcomes."],
+  ["How long do campaigns typically take?", "Foundation work takes three to four weeks. Visibility and audience work typically needs six to twelve weeks before patterns become clear."],
+  ["Can I customize a package?", "Yes. Many authors start with a book audit and we scope a custom engagement from there."],
+  ["How do I get started?", "Request a free book audit. We review your book's positioning, listing, and audience opportunities, then recommend the right next step."],
+] as const;
+
+export const BLOG_POSTS = [
+  {
+    slug: "why-great-books-dont-sell",
+    title: "Why Great Books Don't Sell",
+    category: "Book Marketing",
+    date: "2026-02-04",
+    readTime: "7 min read",
+    excerpt: "Quality and visibility are two different problems. Here is how to tell which one your book actually has.",
+    body: [
+      "A book can be well written, well edited, and warmly reviewed, and still sell almost nothing. That is not a contradiction. Quality determines whether a reader finishes and recommends your book. Visibility determines whether they ever open the first page.",
+      "Most struggling books are not quality problems. They are discovery problems: the wrong categories, keywords no reader searches, a description written like a synopsis instead of a hook, and no audience being reached deliberately.",
+      "Start by separating the two. Look at your listing traffic against your conversion. If very few people see the page, you have a discovery problem. If many people see it and few buy, you have a conversion problem. Each needs a different fix, and treating one as the other wastes months.",
+      "The practical order is: fix positioning, then metadata, then description, then outreach, then paid amplification. Spending on advertising before the listing converts simply pays to show an unconvincing page to more people.",
+    ],
+  },
+  {
+    slug: "how-to-market-a-self-published-book",
+    title: "How to Market a Self-Published Book",
+    category: "Book Marketing",
+    date: "2026-01-27",
+    readTime: "9 min read",
+    excerpt: "A realistic sequence for indie authors who do not have a publisher's marketing department behind them.",
+    body: [
+      "Self-published authors have an advantage traditional authors rarely have: full control of pricing, metadata, description copy, and timing. The disadvantage is that nobody else will do the work.",
+      "Begin with reader definition. Not demographics — reading behaviour. Which authors do they already buy? Which tropes do they search for? Which series do they finish?",
+      "Then align the book: cover, title, subtitle, categories, keywords, and description should all say the same thing to the same reader.",
+      "Only after that does promotion make sense. Outreach, newsletter swaps, Goodreads presence, and advertising all work better against a listing that already converts.",
+    ],
+  },
+  {
+    slug: "how-amazon-book-discovery-works",
+    title: "How Amazon Book Discovery Works",
+    category: "Amazon",
+    date: "2026-01-19",
+    readTime: "8 min read",
+    excerpt: "Search, browse, and recommendation are three separate paths to your book. Most authors optimise for only one.",
+    body: [
+      "Readers reach a book page in three broad ways: they search, they browse a category or list, or they are recommended the book by the store itself.",
+      "Search rewards relevance between the terms readers type and the terms attached to your book. Browse rewards category fit. Recommendation rewards sustained buying and reading behaviour from readers similar to yours.",
+      "You influence the first two directly through keywords, categories, and metadata. You influence the third indirectly, by consistently attracting readers who genuinely like the book.",
+      "No one controls the algorithm, and anyone claiming otherwise is selling something. What you can control is relevance, clarity, and consistency.",
+    ],
+  },
+  {
+    slug: "how-to-build-an-author-brand",
+    title: "How to Build an Author Brand",
+    category: "Author Branding",
+    date: "2026-01-12",
+    readTime: "6 min read",
+    excerpt: "Your brand is the promise readers rely on when deciding whether to try your next book.",
+    body: [
+      "An author brand is not a logo. It is the consistent expectation a reader has about what your books deliver.",
+      "Define three things: who you write for, what feeling your books reliably create, and what themes you return to. Everything else — bio, site, social presence, newsletter voice — follows from those.",
+      "Consistency matters more than volume. A recognisable presence twice a week beats an exhausting daily output that says something different each time.",
+    ],
+  },
+  {
+    slug: "book-marketing-mistakes",
+    title: "7 Book Marketing Mistakes Authors Make",
+    category: "Book Marketing",
+    date: "2026-01-06",
+    readTime: "6 min read",
+    excerpt: "The recurring, fixable errors we see most often in author marketing audits.",
+    body: [
+      "One: marketing to everyone. Two: describing the plot instead of selling the experience. Three: choosing categories by ambition rather than fit.",
+      "Four: launching without an audience. Five: advertising before the listing converts. Six: abandoning promotion after launch week. Seven: treating each book as a separate project rather than part of an author career.",
+      "Each of these is fixable, and most can be corrected in weeks rather than months.",
+    ],
+  },
+  {
+    slug: "find-your-ideal-book-reader",
+    title: "How to Find Your Ideal Book Reader",
+    category: "Audience Growth",
+    date: "2025-12-16",
+    readTime: "7 min read",
+    excerpt: "Comparable titles, reader reviews, and shelving behaviour tell you more than any demographic profile.",
+    body: [
+      "Your ideal reader already reads. The fastest way to find them is to study what they read now.",
+      "Collect ten comparable titles. Read their reviews closely — especially the three-star ones. Readers explain exactly what they wanted and did not get.",
+      "Then look at how those books are shelved and categorised. That is where your book needs to appear.",
+    ],
+  },
+  {
+    slug: "prepare-for-a-book-launch",
+    title: "How to Prepare for a Book Launch",
+    category: "Book Launches",
+    date: "2025-12-08",
+    readTime: "8 min read",
+    excerpt: "Launch results are usually decided in the sixty days before publication day.",
+    body: [
+      "Launch week amplifies whatever you built beforehand. With no audience, there is nothing to amplify.",
+      "Sixty days out: positioning, assets, and advance reader recruitment. Thirty days out: content, outreach, and list growth. Fourteen days out: intensified promotion and review coordination.",
+      "Launch week itself should be execution, not decision-making.",
+    ],
+  },
+  {
+    slug: "goodreads-marketing-strategies",
+    title: "Goodreads Marketing Strategies for Authors",
+    category: "Goodreads",
+    date: "2025-11-28",
+    readTime: "6 min read",
+    excerpt: "Ethical, sustainable ways to build presence where readers decide what to read next.",
+    body: [
+      "Goodreads is a reader space first. Authors who treat it as an advertising channel are usually ignored.",
+      "Complete your author profile, connect your books, and make comparable-title research part of your routine. Engage as a reader as well as an author.",
+      "Never pay for reviews, never ask for positive reviews, and never coordinate rating activity. Honest reviews from genuine readers are the only kind worth having.",
+    ],
+  },
+  {
+    slug: "how-authors-build-an-email-list",
+    title: "How Authors Can Build an Email List",
+    category: "Audience Growth",
+    date: "2025-11-14",
+    readTime: "7 min read",
+    excerpt: "The one audience asset you own outright — and the simplest way to start it.",
+    body: [
+      "Social platforms rent you an audience. Email lets you own the relationship.",
+      "Offer something genuinely wanted by readers of your genre: a prequel scene, a short story, a practical guide. Put it in the back matter of every book and on your site.",
+      "Then write regularly enough that readers remember subscribing. Once a month, consistently, is enough.",
+    ],
+  },
+  {
+    slug: "amazon-a-plus-content-explained",
+    title: "Amazon A+ Content Explained",
+    category: "Amazon",
+    date: "2025-11-03",
+    readTime: "5 min read",
+    excerpt: "What A+ Content can and cannot do for a book detail page, and how to plan modules that convert.",
+    body: [
+      "A+ Content adds visual modules beneath your description. Used well, it answers the questions a hesitant reader still has.",
+      "Good modules show series order, comparable-title positioning, genuine review quotes, and author credibility.",
+      "Keep text short, images clean, and every module tied to a reason to buy.",
+    ],
+  },
+];
+
+export const RESOURCES = [
+  { category: "Book Marketing", title: "The Book Discoverability Checklist", body: "A page-by-page audit of the assets that determine whether readers find your book.", type: "PDF checklist" },
+  { category: "Amazon", title: "Amazon Keyword Research Worksheet", body: "The research process we use to build keyword sets for a new title.", type: "Worksheet" },
+  { category: "Amazon", title: "Book Description Framework", body: "A structure for descriptions that read like sales copy, not synopses.", type: "Template" },
+  { category: "Goodreads", title: "Ethical Goodreads Starter Guide", body: "How to build presence on Goodreads without crossing reader-trust lines.", type: "Guide" },
+  { category: "Author Branding", title: "Author Positioning Canvas", body: "One page to define who you write for and what you are known for.", type: "Canvas" },
+  { category: "Book Launches", title: "60-Day Launch Timeline", body: "The full pre-launch, launch-week, and post-launch schedule.", type: "Timeline" },
+  { category: "Social Media", title: "Author Content Pillar Planner", body: "Build a sustainable content rhythm between releases.", type: "Planner" },
+  { category: "Audience Growth", title: "Reader Magnet Playbook", body: "Choose and deliver a reader magnet that attracts the right subscribers.", type: "Playbook" },
+];
+
+export const GENRES = [
+  "Romance",
+  "Thriller",
+  "Mystery",
+  "Fantasy",
+  "Science Fiction",
+  "Literary Fiction",
+  "Historical Fiction",
+  "Young Adult",
+  "Memoir",
+  "Business / Nonfiction",
+  "Self-Help",
+  "Other",
+];
