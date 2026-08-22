@@ -11,8 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AmazonOptimizationRouteImport } from './routes/amazon-optimization'
+import { Route as AuthorBrandRouteImport } from './routes/author-brand'
 import { Route as BookAuditRouteImport } from './routes/book-audit'
+import { Route as BookLaunchRouteImport } from './routes/book-launch'
+import { Route as BookMarketingRouteImport } from './routes/book-marketing'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GoodreadsMarketingRouteImport } from './routes/goodreads-marketing'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ResultsRouteImport } from './routes/results'
@@ -28,14 +33,39 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AmazonOptimizationRoute = AmazonOptimizationRouteImport.update({
+  id: '/amazon-optimization',
+  path: '/amazon-optimization',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorBrandRoute = AuthorBrandRouteImport.update({
+  id: '/author-brand',
+  path: '/author-brand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BookAuditRoute = BookAuditRouteImport.update({
   id: '/book-audit',
   path: '/book-audit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookLaunchRoute = BookLaunchRouteImport.update({
+  id: '/book-launch',
+  path: '/book-launch',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookMarketingRoute = BookMarketingRouteImport.update({
+  id: '/book-marketing',
+  path: '/book-marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GoodreadsMarketingRoute = GoodreadsMarketingRouteImport.update({
+  id: '/goodreads-marketing',
+  path: '/goodreads-marketing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -62,8 +92,13 @@ const ServicesRoute = ServicesRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/amazon-optimization': typeof AmazonOptimizationRoute
+  '/author-brand': typeof AuthorBrandRoute
   '/book-audit': typeof BookAuditRoute
+  '/book-launch': typeof BookLaunchRoute
+  '/book-marketing': typeof BookMarketingRoute
   '/contact': typeof ContactRoute
+  '/goodreads-marketing': typeof GoodreadsMarketingRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
   '/results': typeof ResultsRoute
@@ -72,8 +107,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/amazon-optimization': typeof AmazonOptimizationRoute
+  '/author-brand': typeof AuthorBrandRoute
   '/book-audit': typeof BookAuditRoute
+  '/book-launch': typeof BookLaunchRoute
+  '/book-marketing': typeof BookMarketingRoute
   '/contact': typeof ContactRoute
+  '/goodreads-marketing': typeof GoodreadsMarketingRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
   '/results': typeof ResultsRoute
@@ -83,8 +123,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/amazon-optimization': typeof AmazonOptimizationRoute
+  '/author-brand': typeof AuthorBrandRoute
   '/book-audit': typeof BookAuditRoute
+  '/book-launch': typeof BookLaunchRoute
+  '/book-marketing': typeof BookMarketingRoute
   '/contact': typeof ContactRoute
+  '/goodreads-marketing': typeof GoodreadsMarketingRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
   '/results': typeof ResultsRoute
@@ -95,8 +140,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/amazon-optimization'
+    | '/author-brand'
     | '/book-audit'
+    | '/book-launch'
+    | '/book-marketing'
     | '/contact'
+    | '/goodreads-marketing'
     | '/pricing'
     | '/resources'
     | '/results'
@@ -105,8 +155,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/amazon-optimization'
+    | '/author-brand'
     | '/book-audit'
+    | '/book-launch'
+    | '/book-marketing'
     | '/contact'
+    | '/goodreads-marketing'
     | '/pricing'
     | '/resources'
     | '/results'
@@ -115,8 +170,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/amazon-optimization'
+    | '/author-brand'
     | '/book-audit'
+    | '/book-launch'
+    | '/book-marketing'
     | '/contact'
+    | '/goodreads-marketing'
     | '/pricing'
     | '/resources'
     | '/results'
@@ -126,8 +186,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AmazonOptimizationRoute: typeof AmazonOptimizationRoute
+  AuthorBrandRoute: typeof AuthorBrandRoute
   BookAuditRoute: typeof BookAuditRoute
+  BookLaunchRoute: typeof BookLaunchRoute
+  BookMarketingRoute: typeof BookMarketingRoute
   ContactRoute: typeof ContactRoute
+  GoodreadsMarketingRoute: typeof GoodreadsMarketingRoute
   PricingRoute: typeof PricingRoute
   ResourcesRoute: typeof ResourcesRoute
   ResultsRoute: typeof ResultsRoute
@@ -150,6 +215,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/amazon-optimization': {
+      id: '/amazon-optimization'
+      path: '/amazon-optimization'
+      fullPath: '/amazon-optimization'
+      preLoaderRoute: typeof AmazonOptimizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/author-brand': {
+      id: '/author-brand'
+      path: '/author-brand'
+      fullPath: '/author-brand'
+      preLoaderRoute: typeof AuthorBrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/book-audit': {
       id: '/book-audit'
       path: '/book-audit'
@@ -157,11 +236,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookAuditRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/book-launch': {
+      id: '/book-launch'
+      path: '/book-launch'
+      fullPath: '/book-launch'
+      preLoaderRoute: typeof BookLaunchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-marketing': {
+      id: '/book-marketing'
+      path: '/book-marketing'
+      fullPath: '/book-marketing'
+      preLoaderRoute: typeof BookMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/goodreads-marketing': {
+      id: '/goodreads-marketing'
+      path: '/goodreads-marketing'
+      fullPath: '/goodreads-marketing'
+      preLoaderRoute: typeof GoodreadsMarketingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -198,8 +298,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AmazonOptimizationRoute: AmazonOptimizationRoute,
+  AuthorBrandRoute: AuthorBrandRoute,
   BookAuditRoute: BookAuditRoute,
+  BookLaunchRoute: BookLaunchRoute,
+  BookMarketingRoute: BookMarketingRoute,
   ContactRoute: ContactRoute,
+  GoodreadsMarketingRoute: GoodreadsMarketingRoute,
   PricingRoute: PricingRoute,
   ResourcesRoute: ResourcesRoute,
   ResultsRoute: ResultsRoute,
