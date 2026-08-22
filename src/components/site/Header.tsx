@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { NAV, BRAND } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { Container } from "./primitives";
+import logoAsset from "@/assets/magahit-logo.png.asset.json";
 
 const SECONDARY = [
   { label: "Book Marketing", to: "/book-marketing" },
@@ -40,12 +41,21 @@ export function Header() {
       )}
     >
       <Container className="flex h-20 items-center justify-between gap-6">
-        <Link to="/" className="group flex flex-col leading-none">
-          <span className="font-serif text-xl tracking-tight text-foreground sm:text-[1.375rem]">
-            Magahit
-          </span>
-          <span className="mt-1 text-[0.5625rem] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-            Author Marketing
+        <Link to="/" className="group flex items-center gap-3 leading-none">
+          <img
+            src={logoAsset.url}
+            alt="Magahit Author Marketing logo"
+            width={44}
+            height={44}
+            className="h-10 w-10 rounded-sm object-cover sm:h-11 sm:w-11"
+          />
+          <span className="flex flex-col">
+            <span className="font-serif text-xl tracking-tight text-foreground sm:text-[1.375rem]">
+              Magahit
+            </span>
+            <span className="mt-1 text-[0.5625rem] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+              Author Marketing
+            </span>
           </span>
         </Link>
 

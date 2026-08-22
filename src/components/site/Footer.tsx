@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { BRAND } from "@/content/site";
 import { Container, GoldRule } from "./primitives";
+import logoAsset from "@/assets/magahit-logo.png.asset.json";
 
 const COLUMNS = [
   {
@@ -41,6 +42,14 @@ export function Footer() {
       <Container className="py-16 sm:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
+            <img
+              src={logoAsset.url}
+              alt="Magahit Author Marketing logo"
+              width={56}
+              height={56}
+              loading="lazy"
+              className="mb-5 h-14 w-14 rounded-sm object-cover"
+            />
             <p className="font-serif text-2xl">Magahit</p>
             <p className="mt-1 text-[0.5625rem] font-semibold uppercase tracking-[0.3em] text-ink-foreground/60">
               Author Marketing
