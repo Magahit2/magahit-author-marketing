@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "Author growth and book marketing agency helping authors improve discoverability, conversion, and audience growth.",
           areaServed: "Worldwide",
-          email: "hello@magahit.com",
+          email: "magahitauthormarketing@gmail.com",
           serviceType: [
             "Book marketing services",
             "Author branding",
