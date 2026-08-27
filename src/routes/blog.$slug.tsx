@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
-import { Cta, CtaBand, Section } from "@/components/site/blocks";
+import { CtaBand, Section } from "@/components/site/blocks";
+import { Cta } from "@/components/site/primitives";
 import { BLOG_POSTS } from "@/content/site";
 
 export const Route = createFileRoute("/blog/$slug")({
