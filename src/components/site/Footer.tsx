@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { BRAND } from "@/content/site";
 import { Container, GoldRule } from "./primitives";
 import logoAsset from "@/assets/magahit-logo.png.asset.json";
