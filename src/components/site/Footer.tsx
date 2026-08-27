@@ -58,15 +58,22 @@ export function Footer() {
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-ink-foreground/70">
               “{BRAND.tagline}”
             </p>
-            <p className="mt-6 text-sm text-ink-foreground/70">
-              <a href={`mailto:${BRAND.email}`} className="hover:text-gold">
-                {BRAND.email}
-              </a>
-              <br />
-              {BRAND.phone}
-              <br />
-              {BRAND.location}
-            </p>
+            <ul className="mt-6 space-y-3 text-sm text-ink-foreground/70">
+              <li className="flex gap-3">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <a href={`mailto:${BRAND.email}`} className="break-all hover:text-gold">
+                  {BRAND.email}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <span>{BRAND.phone}</span>
+              </li>
+              <li className="flex gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <span>{BRAND.location}</span>
+              </li>
+            </ul>
             <a
               href={BRAND.tiktok}
               target="_blank"
