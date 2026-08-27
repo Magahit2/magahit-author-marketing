@@ -2,9 +2,11 @@ export const BRAND = {
   name: "Magahit Author Marketing",
   short: "Magahit",
   tagline: "Helping authors turn great books into discoverable brands.",
-  email: "hello@magahit.com",
+  email: "magahitauthormarketing@gmail.com",
   phone: "+1 (555) 014-2280",
   location: "Remote — working with authors worldwide",
+  tiktok: "https://www.tiktok.com/@magahitauthormarketing",
+  tiktokHandle: "@magahitauthormarketing",
 };
 
 export const NAV = [
