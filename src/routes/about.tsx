@@ -154,7 +154,7 @@ function About() {
               width={768}
               height={1344}
               loading="lazy"
-              className="relative aspect-square w-full object-cover object-[center_18%] shadow-editorial lg:aspect-video"
+              className="relative aspect-square w-full object-cover object-[center_20%] shadow-editorial"
             />
           </div>
           <div className="order-1 lg:order-2">
