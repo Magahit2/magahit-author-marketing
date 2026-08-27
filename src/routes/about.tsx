@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import library from "@/assets/library.jpg";
-import manuscript from "@/assets/manuscript.jpg";
+import founderAsset from "@/assets/founder-emmanuel-ola.jpg.asset.json";
 import {
   CtaBand,
   FeatureCard,
@@ -146,34 +146,35 @@ function About() {
 
       <Section>
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <img
-            src={manuscript}
-            alt="A manuscript with handwritten margin notes beside two closed novels"
-            width={1408}
-            height={1008}
-            loading="lazy"
-            className="aspect-[7/5] w-full object-cover shadow-editorial"
-          />
-          <div>
-            <SectionHeading
-              eyebrow="Founder's note"
-              title="Written for Authors, by People Who Read."
+          <div className="relative order-2 lg:order-1">
+            <div className="absolute -left-4 -top-4 hidden h-full w-full border border-gold/40 lg:block" />
+            <img
+              src={founderAsset.url}
+              alt="Emmanuel Ola, founder of Magahit Author Marketing, in a burgundy suit"
+              width={768}
+              height={1344}
+              loading="lazy"
+              className="relative aspect-[4/5] w-full max-w-sm object-cover shadow-editorial lg:max-w-none"
             />
-            <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
-              <p>
-                Magahit was founded on a simple frustration: the advice available to authors was
-                either vague encouragement or aggressive tactics that treated readers as targets.
-                Neither builds a career.
-              </p>
-              <p>
-                We built the agency we wished existed — one that does the unglamorous research,
-                writes the description twelve times, and tells an author honestly when the cover,
-                not the marketing, is the thing holding the book back.
-              </p>
-              <p className="font-serif text-lg italic text-foreground">
-                — Founder, Magahit Author Marketing
-              </p>
-            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <SectionHeading
+              eyebrow="Founder"
+              title="Emmanuel Ola"
+            />
+            <p className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
+              Magahit was founded by Emmanuel Ola on a simple frustration: the advice available to
+              authors was either vague encouragement or aggressive tactics that treated readers as
+              targets. Neither builds a career.
+            </p>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+              We built the agency we wished existed — one that does the unglamorous research,
+              writes the description twelve times, and tells an author honestly when the cover,
+              not the marketing, is the thing holding the book back.
+            </p>
+            <p className="mt-6 font-serif text-lg italic text-foreground">
+              — Emmanuel Ola, Founder, Magahit Author Marketing
+            </p>
           </div>
         </div>
       </Section>
