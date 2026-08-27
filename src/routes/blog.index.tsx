@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { CtaBand, PageHero, Reveal, Section, SectionHeading } from "@/components/site/blocks";
 import { BLOG_POSTS } from "@/content/site";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Author Marketing Blog | Magahit Author Marketing" },

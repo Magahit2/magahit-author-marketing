@@ -17,11 +17,15 @@ import { Route as BookAuditRouteImport } from './routes/book-audit'
 import { Route as BookLaunchRouteImport } from './routes/book-launch'
 import { Route as BookMarketingRouteImport } from './routes/book-marketing'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GoodreadsMarketingRouteImport } from './routes/goodreads-marketing'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as WorkWithUsRouteImport } from './routes/work-with-us'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -63,6 +67,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GoodreadsMarketingRoute = GoodreadsMarketingRouteImport.update({
   id: '/goodreads-marketing',
   path: '/goodreads-marketing',
@@ -88,6 +97,21 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkWithUsRoute = WorkWithUsRouteImport.update({
+  id: '/work-with-us',
+  path: '/work-with-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -98,11 +122,15 @@ export interface FileRoutesByFullPath {
   '/book-launch': typeof BookLaunchRoute
   '/book-marketing': typeof BookMarketingRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/goodreads-marketing': typeof GoodreadsMarketingRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
   '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
+  '/work-with-us': typeof WorkWithUsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -113,11 +141,15 @@ export interface FileRoutesByTo {
   '/book-launch': typeof BookLaunchRoute
   '/book-marketing': typeof BookMarketingRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/goodreads-marketing': typeof GoodreadsMarketingRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
   '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
+  '/work-with-us': typeof WorkWithUsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -129,11 +161,15 @@ export interface FileRoutesById {
   '/book-launch': typeof BookLaunchRoute
   '/book-marketing': typeof BookMarketingRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/goodreads-marketing': typeof GoodreadsMarketingRoute
   '/pricing': typeof PricingRoute
   '/resources': typeof ResourcesRoute
   '/results': typeof ResultsRoute
   '/services': typeof ServicesRoute
+  '/work-with-us': typeof WorkWithUsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -146,11 +182,15 @@ export interface FileRouteTypes {
     | '/book-launch'
     | '/book-marketing'
     | '/contact'
+    | '/faq'
     | '/goodreads-marketing'
     | '/pricing'
     | '/resources'
     | '/results'
     | '/services'
+    | '/work-with-us'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -161,11 +201,15 @@ export interface FileRouteTypes {
     | '/book-launch'
     | '/book-marketing'
     | '/contact'
+    | '/faq'
     | '/goodreads-marketing'
     | '/pricing'
     | '/resources'
     | '/results'
     | '/services'
+    | '/work-with-us'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -176,11 +220,15 @@ export interface FileRouteTypes {
     | '/book-launch'
     | '/book-marketing'
     | '/contact'
+    | '/faq'
     | '/goodreads-marketing'
     | '/pricing'
     | '/resources'
     | '/results'
     | '/services'
+    | '/work-with-us'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -192,11 +240,15 @@ export interface RootRouteChildren {
   BookLaunchRoute: typeof BookLaunchRoute
   BookMarketingRoute: typeof BookMarketingRoute
   ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
   GoodreadsMarketingRoute: typeof GoodreadsMarketingRoute
   PricingRoute: typeof PricingRoute
   ResourcesRoute: typeof ResourcesRoute
   ResultsRoute: typeof ResultsRoute
   ServicesRoute: typeof ServicesRoute
+  WorkWithUsRoute: typeof WorkWithUsRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -257,6 +309,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/goodreads-marketing': {
       id: '/goodreads-marketing'
       path: '/goodreads-marketing'
@@ -292,6 +351,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work-with-us': {
+      id: '/work-with-us'
+      path: '/work-with-us'
+      fullPath: '/work-with-us'
+      preLoaderRoute: typeof WorkWithUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -304,11 +384,15 @@ const rootRouteChildren: RootRouteChildren = {
   BookLaunchRoute: BookLaunchRoute,
   BookMarketingRoute: BookMarketingRoute,
   ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
   GoodreadsMarketingRoute: GoodreadsMarketingRoute,
   PricingRoute: PricingRoute,
   ResourcesRoute: ResourcesRoute,
   ResultsRoute: ResultsRoute,
   ServicesRoute: ServicesRoute,
+  WorkWithUsRoute: WorkWithUsRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
