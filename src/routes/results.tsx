@@ -9,6 +9,7 @@ import {
   TestimonialCarousel,
 } from "@/components/site/blocks";
 import manuscript from "@/assets/manuscript.jpg";
+import { BRAND } from "@/content/site";
 
 export const Route = createFileRoute("/results")({
   head: () => ({
