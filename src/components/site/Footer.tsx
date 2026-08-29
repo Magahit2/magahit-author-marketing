@@ -68,7 +68,9 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <span>{BRAND.phone}</span>
+                <a href={BRAND.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                  {BRAND.phone}
+                </a>
               </li>
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
