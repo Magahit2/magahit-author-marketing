@@ -83,6 +83,9 @@ function Results() {
             </Reveal>
           ))}
         </div>
+        <div className="mt-10">
+          <TikTokButton label="See Proof on TikTok" />
+        </div>
       </Section>
 
       <Section tone="parchment">
