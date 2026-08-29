@@ -121,6 +121,9 @@ function Results() {
         <div className="mt-14">
           <TestimonialCarousel />
         </div>
+        <div className="mt-10 flex justify-center">
+          <TikTokButton label="Watch Author Proof on TikTok" />
+        </div>
       </Section>
 
       <CtaBand
