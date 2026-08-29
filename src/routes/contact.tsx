@@ -47,7 +47,14 @@ function Contact() {
               </li>
               <li className="flex gap-4">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span className="text-foreground">{BRAND.phone}</span>
+                <a
+                  href={BRAND.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary"
+                >
+                  {BRAND.phone} <span className="text-muted-foreground">(WhatsApp)</span>
+                </a>
               </li>
               <li className="flex gap-4">
                 <svg
