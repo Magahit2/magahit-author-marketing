@@ -13,7 +13,6 @@ import {
   SectionHeading,
   ServiceCard,
   StepGrid,
-  TestimonialCarousel,
 } from "@/components/site/blocks";
 import { HOME_FAQS, HOME_SERVICES, METHOD } from "@/content/site";
 
