@@ -13,7 +13,6 @@ import {
   SectionHeading,
   ServiceCard,
   StepGrid,
-  TestimonialCarousel,
 } from "@/components/site/blocks";
 import { HOME_FAQS, HOME_SERVICES, METHOD } from "@/content/site";
 
@@ -247,19 +246,6 @@ function Home() {
         </div>
       </Section>
 
-
-      {/* TESTIMONIALS */}
-      <Section>
-        <SectionHeading
-          eyebrow="Author voices"
-          title="What Authors Say"
-          align="center"
-          intro="We never publish invented testimonials. This section holds space for real author quotes as engagements complete."
-        />
-        <div className="mt-14">
-          <TestimonialCarousel />
-        </div>
-      </Section>
 
       {/* AUDIT CTA */}
       <CtaBand
