@@ -247,40 +247,6 @@ function Home() {
         </div>
       </Section>
 
-      {/* RESULTS */}
-      <Section tone="parchment">
-        <SectionHeading
-          eyebrow="Results"
-          title="Good Books Create the Foundation. Strategy Creates Discoverability."
-          intro="We publish client results only once they are verified and approved by the author. Case studies in progress are listed below."
-        />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {[1, 2, 3].map((n, i) => (
-            <Reveal key={n} delay={i * 70} className="h-full">
-              <article className="flex h-full flex-col border border-border bg-card p-7">
-                <span className="inline-flex w-fit border border-gold/50 px-3 py-1 text-[0.625rem] font-semibold uppercase tracking-[0.18em] text-gold-foreground">
-                  Client result coming soon
-                </span>
-                <dl className="mt-7 space-y-4 text-sm">
-                  {["Author", "Book", "Genre", "Challenge", "Strategy", "Result"].map((label) => (
-                    <div key={label}>
-                      <dt className="text-[0.625rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                        {label}
-                      </dt>
-                      <dd className="mt-1 text-foreground/60">To be published</dd>
-                    </div>
-                  ))}
-                </dl>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-12">
-          <Cta to="/results" variant="outline">
-            View Case Studies
-          </Cta>
-        </div>
-      </Section>
 
       {/* TESTIMONIALS */}
       <Section>

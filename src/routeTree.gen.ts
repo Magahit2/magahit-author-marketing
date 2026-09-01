@@ -24,7 +24,6 @@ import { Route as GoodreadsMarketingRouteImport } from './routes/goodreads-marke
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ResourcesRouteImport } from './routes/resources'
-import { Route as ResultsRouteImport } from './routes/results'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WorkWithUsRouteImport } from './routes/work-with-us'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -107,11 +106,6 @@ const ResourcesRoute = ResourcesRouteImport.update({
   path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ResultsRoute = ResultsRouteImport.update({
-  id: '/results',
-  path: '/results',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -159,7 +153,6 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/resources': typeof ResourcesRoute
-  '/results': typeof ResultsRoute
   '/terms': typeof TermsRoute
   '/work-with-us': typeof WorkWithUsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -183,7 +176,6 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/resources': typeof ResourcesRoute
-  '/results': typeof ResultsRoute
   '/terms': typeof TermsRoute
   '/work-with-us': typeof WorkWithUsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -208,7 +200,6 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/resources': typeof ResourcesRoute
-  '/results': typeof ResultsRoute
   '/terms': typeof TermsRoute
   '/work-with-us': typeof WorkWithUsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -234,7 +225,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy-policy'
     | '/resources'
-    | '/results'
     | '/terms'
     | '/work-with-us'
     | '/blog/$slug'
@@ -258,7 +248,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy-policy'
     | '/resources'
-    | '/results'
     | '/terms'
     | '/work-with-us'
     | '/blog/$slug'
@@ -282,7 +271,6 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy-policy'
     | '/resources'
-    | '/results'
     | '/terms'
     | '/work-with-us'
     | '/blog/$slug'
@@ -307,7 +295,6 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ResourcesRoute: typeof ResourcesRoute
-  ResultsRoute: typeof ResultsRoute
   TermsRoute: typeof TermsRoute
   WorkWithUsRoute: typeof WorkWithUsRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -423,13 +410,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/results': {
-      id: '/results'
-      path: '/results'
-      fullPath: '/results'
-      preLoaderRoute: typeof ResultsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -491,7 +471,6 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ResourcesRoute: ResourcesRoute,
-  ResultsRoute: ResultsRoute,
   TermsRoute: TermsRoute,
   WorkWithUsRoute: WorkWithUsRoute,
   BlogSlugRoute: BlogSlugRoute,
