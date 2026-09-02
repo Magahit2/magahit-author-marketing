@@ -75,6 +75,12 @@ const WHY_AUTHORS = [
 
 const TRANSPARENCY_POINTS = ["Clear Scope", "Clear Deliverables", "Clear Communication", "Clear Reporting"] as const;
 
+const OPERATING_MODEL = [
+  { title: "You Provide", items: ["Book materials", "Author insight", "Approvals", "Strategic decisions"] },
+  { title: "We Handle", items: ["Research", "Planning", "Execution", "Outreach", "Campaign management", "Reporting"] },
+  { title: "Together", items: ["Review results", "Refine strategy", "Identify next opportunities"] },
+] as const;
+
 function About() {
   return (
     <>
@@ -186,7 +192,7 @@ function About() {
           </div>
           <div className="order-1 lg:order-2">
             <SectionHeading
-              eyebrow="Founder"
+               eyebrow="Meet the founder"
               title="Emmanuel Ola"
             />
             <p className="mt-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-primary">
@@ -274,8 +280,8 @@ function About() {
 
       <Section tone="muted">
         <SectionHeading
-          eyebrow="The people behind the work"
-          title="Specialist Capabilities, Assembled Around the Campaign."
+          eyebrow="Our team"
+          title="The People Behind the Work"
           intro="Great marketing requires more than one skill. Magahit brings together specialised capabilities around each campaign so authors have access to the expertise required at different stages of the work."
         />
         <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -332,15 +338,11 @@ function About() {
           intro="Authors should not have to become full-time marketers to build a readership. Our role is to take the research, planning, coordination, outreach, content, and campaign execution off the author's plate wherever possible. We keep the author involved where their perspective matters — approvals, creative direction, book knowledge, and important decisions — while Magahit manages the marketing workflow."
         />
         <div className="mt-14 grid gap-10 md:grid-cols-3">
-          {[
-            ["You Provide", ["Book materials", "Author insight", "Approvals", "Strategic decisions"]],
-            ["We Handle", ["Research", "Planning", "Execution", "Outreach", "Campaign management", "Reporting"]],
-            ["Together", ["Review results", "Refine strategy", "Identify next opportunities"]],
-          ].map(([title, items], i) => (
+          {OPERATING_MODEL.map(({ title, items }) => (
             <div key={title} className="border-t-2 border-primary pt-6">
               <p className="eyebrow">{title}</p>
               <ul className="mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
-                {(items as string[]).map((item) => <li key={item}>{item}</li>)}
+                {items.map((item) => <li key={item}>{item}</li>)}
               </ul>
             </div>
           ))}
