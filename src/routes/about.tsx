@@ -48,6 +48,39 @@ const DIFFERENT = [
   { title: "We say no", body: "If a book isn't ready, or a tactic wouldn't be ethical, we tell you instead of billing you." },
 ];
 
+const TEAM_CAPABILITIES = [
+  ["Strategy & Campaign Direction", "Research, positioning, campaign planning, prioritisation, sequencing, and performance review."],
+  ["Book Discovery & Amazon Strategy", "Categories, keywords, metadata, book descriptions, A+ Content, reader positioning, and discoverability research."],
+  ["Content & Author Branding", "Social content, book creative, reader-facing messaging, author positioning, and content systems."],
+  ["Reader & Reviewer Outreach", "Book bloggers, reviewers, Goodreads communities, Bookstagram, book clubs, podcasts, YouTube channels, and relevant reader communities."],
+  ["Audience Development", "Email systems, lead magnets, newsletters, reader engagement, and long-term audience building."],
+  ["Campaign Execution & Optimisation", "Outreach coordination, advertising management, campaign monitoring, reporting, testing, and optimisation."],
+] as const;
+
+const TEAM_SEQUENCE = [
+  ["01", "Discover", "We learn about your book, genre, audience, current positioning, existing marketing, and goals."],
+  ["02", "Strategise", "We identify the highest-priority opportunities and build the campaign sequence."],
+  ["03", "Execute", "Our team handles the agreed marketing activities, outreach, content, optimisation, and coordination."],
+  ["04", "Review", "We report what happened, identify what we learned, and determine what should happen next."],
+] as const;
+
+const WHY_AUTHORS = [
+  ["Book-Specific", "Every strategy begins with the book, genre, audience, and market."],
+  ["Research-First", "Recommendations are based on research rather than assumptions."],
+  ["Reader-Centered", "We focus on helping the right readers discover the right books."],
+  ["Integrated", "Discovery, content, outreach, advertising, and audience building work together."],
+  ["Transparent", "Authors know what is being done, why it is being done, and what the work produces."],
+  ["Long-Term", "We think beyond one campaign and one title."],
+] as const;
+
+const TRANSPARENCY_POINTS = ["Clear Scope", "Clear Deliverables", "Clear Communication", "Clear Reporting"] as const;
+
+const OPERATING_MODEL = [
+  { title: "You Provide", items: ["Book materials", "Author insight", "Approvals", "Strategic decisions"] },
+  { title: "We Handle", items: ["Research", "Planning", "Execution", "Outreach", "Campaign management", "Reporting"] },
+  { title: "Together", items: ["Review results", "Refine strategy", "Identify next opportunities"] },
+] as const;
+
 function About() {
   return (
     <>
@@ -159,9 +192,32 @@ function About() {
           </div>
           <div className="order-1 lg:order-2">
             <SectionHeading
-              eyebrow="Founder"
+               eyebrow="Meet the founder"
               title="Emmanuel Ola"
             />
+            <p className="mt-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-primary">
+              Founder &amp; Author Marketing Strategist
+            </p>
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
+              <p>
+                Emmanuel Ola is the founder of Magahit Author Marketing, an author growth agency
+                focused on helping writers turn published books into discoverable brands.
+              </p>
+              <p>
+                His work is built around the intersection of book positioning, reader discovery,
+                marketing strategy, digital outreach, audience development, and author brand growth.
+              </p>
+              <p>
+                Emmanuel founded Magahit after seeing how frequently authors were encouraged to
+                promote their books without first answering the more important questions: Who is the
+                book for? How are those readers discovering books? What makes this particular title
+                relevant to them? And what systems will continue working after the campaign ends?
+              </p>
+              <p>
+                His approach is research-first, reader-aware, and focused on building sustainable
+                marketing systems rather than relying on random promotional activity.
+              </p>
+            </div>
             <p className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
               Magahit was founded by Emmanuel Ola on a simple frustration: the advice available to
               authors was either vague encouragement or aggressive tactics that treated readers as
@@ -175,6 +231,9 @@ function About() {
             <p className="mt-6 font-serif text-lg italic text-foreground">
               — Emmanuel Ola, Founder, Magahit Author Marketing
             </p>
+            <p className="mt-8 border-l-2 border-gold pl-5 font-serif text-xl italic leading-relaxed text-foreground">
+              “Great books don&apos;t just need promotion. They need a path to the readers who will love them.”
+            </p>
           </div>
         </div>
       </Section>
@@ -187,6 +246,153 @@ function About() {
           ))}
         </div>
       </Section>
+
+      <Section>
+        <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <SectionHeading
+            eyebrow="Our background"
+            title="Built From a Frustration With How Authors Are Marketed."
+          />
+          <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+            <p>
+              Magahit Author Marketing was founded from a simple observation: many authors finish
+              the hardest part — writing and publishing the book — only to discover that getting the
+              right readers to find it is an entirely different challenge.
+            </p>
+            <p>
+              Too often, authors are presented with disconnected promotional tactics without first
+              understanding their genre, positioning, audience, competitive landscape, or long-term
+              goals.
+            </p>
+            <p>We built Magahit to take a different approach.</p>
+            <p>
+              Before recommending a campaign, we research the book, the market, the reader, and the
+              opportunities around it. From there, we develop a strategy that connects discoverability,
+              positioning, audience building, outreach, advertising, and launch execution.
+            </p>
+            <p>
+              The objective is not simply to promote another book. It is to build a stronger path
+              between the author, the book, and the reader.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="muted">
+        <SectionHeading
+          eyebrow="Our team"
+          title="The People Behind the Work"
+          intro="Great marketing requires more than one skill. Magahit brings together specialised capabilities around each campaign so authors have access to the expertise required at different stages of the work."
+        />
+        <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          {TEAM_CAPABILITIES.map(([title, body], i) => (
+            <FeatureCard key={title} title={title} body={body} index={i} />
+          ))}
+        </div>
+        <p className="mt-14 max-w-3xl border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
+          Magahit operates with a core strategy function supported by specialist creative, outreach,
+          advertising, and technical collaborators assembled according to each campaign&apos;s requirements.
+        </p>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          eyebrow="How our team works"
+          title="One Strategy. Multiple Specialisms."
+          intro="Every author campaign has one strategic direction. The specialists involved in execution work from that shared strategy so that each activity supports the larger objective. Rather than handing an author from one disconnected service provider to another, we coordinate the work around the book, its readers, and the author's goals."
+        />
+        <div className="mt-14 grid gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          {TEAM_SEQUENCE.map(([step, title, body]) => (
+            <div key={step} className="border-t border-gold/50 pt-6">
+              <span className="font-serif text-3xl text-gold">{step}</span>
+              <h3 className="mt-3 font-serif text-xl text-foreground">{title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="parchment">
+        <div className="grid items-start gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+          <SectionHeading
+            eyebrow="Where we work"
+            title="Based Remotely. Working With Authors Worldwide."
+          />
+          <div>
+            <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Magahit Author Marketing operates remotely, allowing us to work with authors regardless
+              of where they are located. Our work is delivered digitally through research, strategy,
+              communication, outreach, campaign management, reporting, and online collaboration.
+            </p>
+            <p className="mt-8 border-y border-gold/40 py-5 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+              Remote — Working With Authors Worldwide
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          eyebrow="Our operating model"
+          title="Built to Keep the Author Focused on the Work That Matters."
+          intro="Authors should not have to become full-time marketers to build a readership. Our role is to take the research, planning, coordination, outreach, content, and campaign execution off the author's plate wherever possible. We keep the author involved where their perspective matters — approvals, creative direction, book knowledge, and important decisions — while Magahit manages the marketing workflow."
+        />
+        <div className="mt-14 grid gap-10 md:grid-cols-3">
+          {OPERATING_MODEL.map(({ title, items }) => (
+            <div key={title} className="border-t-2 border-primary pt-6">
+              <p className="eyebrow">{title}</p>
+              <ul className="mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                {items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="muted">
+        <SectionHeading
+          eyebrow="Why authors work with us"
+          title="A Serious Marketing Partner for Serious Authors."
+        />
+        <div className="mt-14 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          {WHY_AUTHORS.map(([title, body], i) => (
+            <FeatureCard key={title} title={title} body={body} index={i} />
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+          <SectionHeading
+            eyebrow="Transparency"
+            title="You Should Always Know What Is Happening With Your Campaign."
+          />
+          <div>
+            <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
+              We believe authors should never have to wonder where their marketing budget went or
+              what their marketing team actually did. Campaigns are structured around clear
+              deliverables, defined activities, communication, and reporting. Where appropriate, we
+              share the work completed, opportunities pursued, campaign performance, and
+              recommendations for the next stage.
+            </p>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              {TRANSPARENCY_POINTS.map((point) => (
+                <div key={point} className="border-t border-border py-4 text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
+                  {point}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <CtaBand
+        eyebrow="Start with clarity"
+        title="The Book Is Written. Now Let's Build the Path to Its Readers."
+        body="If you're looking for a marketing partner who will take the time to understand your book, your readers, and your goals before recommending what comes next, we'd be glad to start there."
+        primary={{ label: "Get Your Book Audit", to: "/book-audit" }}
+        secondary={{ label: "Apply to Work With Us", to: "/work-with-us" }}
+      />
 
       <CtaBand
         eyebrow="Who we serve"

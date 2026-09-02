@@ -83,6 +83,13 @@ export function Footer() {
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 <span>{BRAND.location}</span>
               </li>
+              <li className="flex gap-3">
+                <span className="mt-0.5 h-4 w-4 shrink-0 text-center text-[0.625rem] font-semibold text-gold">↗</span>
+                <span>
+                  <span className="block text-ink-foreground/50">Operating model</span>
+                  {BRAND.operatingModel}
+                </span>
+              </li>
             </ul>
             <a
               href={BRAND.tiktok}

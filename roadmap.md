@@ -8,3 +8,10 @@
 - [x] Dynamic service detail page (`/services/$slug`) with 10-point template + related services
 - [x] Existing programme pages left unchanged
 - [x] Verify build + routes render
+
+## Done: Expand About agency information
+- [x] Preserve existing About page, brand system, services, and conversion flows
+- [x] Add founder background, philosophy, and existing portrait treatment
+- [x] Add background, specialist capabilities, team workflow, and remote operating model
+- [x] Add author operating model, reasons to work with Magahit, transparency, and CTA
+- [x] Add remote operating information to the existing footer contact area

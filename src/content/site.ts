@@ -6,6 +6,7 @@ export const BRAND = {
   phone: "+1 (226) 708-7341",
   whatsapp: "https://wa.me/12267087341",
   location: "Remote — working with authors worldwide",
+  operatingModel: "Remote — Working With Authors Worldwide",
   tiktok: "https://www.tiktok.com/@magahitauthormarketing",
   tiktokHandle: "@magahitauthormarketing",
 };
