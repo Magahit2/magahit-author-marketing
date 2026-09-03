@@ -312,24 +312,6 @@ function About() {
         </div>
       </Section>
 
-      <Section tone="parchment">
-        <div className="grid items-start gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-          <SectionHeading
-            eyebrow="Where we work"
-            title="Based Remotely. Working With Authors Worldwide."
-          />
-          <div>
-            <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Magahit Author Marketing operates remotely, allowing us to work with authors regardless
-              of where they are located. Our work is delivered digitally through research, strategy,
-              communication, outreach, campaign management, reporting, and online collaboration.
-            </p>
-            <p className="mt-8 border-y border-gold/40 py-5 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-              Remote — Working With Authors Worldwide
-            </p>
-          </div>
-        </div>
-      </Section>
 
       <Section>
         <SectionHeading
