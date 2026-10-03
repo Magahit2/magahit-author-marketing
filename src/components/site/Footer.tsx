@@ -51,7 +51,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <img
-              src={logoAsset.url}
+              src="/magahit-logo.png"
               alt="Magahit Author Marketing logo"
               width={56}
               height={56}
