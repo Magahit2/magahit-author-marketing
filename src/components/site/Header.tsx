@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+  import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV, BRAND } from "@/content/site";
@@ -43,7 +43,7 @@ export function Header() {
       <Container className="flex h-20 items-center justify-between gap-6">
         <Link to="/" className="group flex items-center gap-3 leading-none">
           <img
-            src={logoAsset.url}
+            src="/magahit-logo.png"
             alt="Magahit Author Marketing logo"
             width={44}
             height={44}
