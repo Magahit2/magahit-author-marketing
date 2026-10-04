@@ -3,12 +3,12 @@
 
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
+const isGitHubActions = process.env['GITHUB_ACTIONS'] === "true";
 
 export default defineConfig({
   // GitHub Pages can only serve static files.
   // Disable the server/Nitro output during the GitHub Actions build.
-  nitro: isGitHubActions ? false : undefined,
+  ...(isGitHubActions ? { nitro: false as const } : {}),
 
   tanstackStart: isGitHubActions
     ? {
