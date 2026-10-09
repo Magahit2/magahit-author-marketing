@@ -15,3 +15,9 @@
 - [x] Add background, specialist capabilities, team workflow, and remote operating model
 - [x] Add author operating model, reasons to work with Magahit, transparency, and CTA
 - [x] Add remote operating information to the existing footer contact area
+
+## Done: Author Website article page
+- [x] New `/author-website` route with full article content (word for word from supplied text)
+- [x] Nav entry "Author Website" right after Services; footer and mobile menu links added
+- [x] WhatsApp "WEBSITE" CTA linked to business WhatsApp number
+- [x] SEO metadata + verified desktop/mobile rendering, no overflow

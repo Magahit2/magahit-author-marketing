@@ -12,6 +12,7 @@ const SECONDARY = [
   { label: "Amazon Optimization", to: "/amazon-optimization" },
   { label: "Goodreads Marketing", to: "/goodreads-marketing" },
   { label: "Book Launch", to: "/book-launch" },
+  { label: "Author Website", to: "/author-website" },
   { label: "Blog", to: "/blog" },
   { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },
