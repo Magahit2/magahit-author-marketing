@@ -128,6 +128,9 @@ export function Footer() {
             <Link to="/terms" className="hover:text-ink-foreground">
               Terms &amp; Conditions
             </Link>
+            <Link to="/how-to-build-an-author-community" className="hover:text-ink-foreground">
+              How to Build an Author Community: A Roadmap to 50,000 Readers
+            </Link>
             <Link to="/disclaimer" className="hover:text-ink-foreground">
               Disclaimer
             </Link>

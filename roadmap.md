@@ -21,3 +21,9 @@
 - [x] Nav entry "Author Website" right after Services; footer and mobile menu links added
 - [x] WhatsApp "WEBSITE" CTA linked to business WhatsApp number
 - [x] SEO metadata + verified desktop/mobile rendering, no overflow
+
+## Done: Author community article page
+- [x] Add the supplied article unchanged at `/how-to-build-an-author-community`
+- [x] Render the reader-acquisition journey as a clear five-stage diagram
+- [x] Place the article link in the footer between Terms & Conditions and Disclaimer
+- [x] Add route-specific SEO metadata and verify the page and footer link
