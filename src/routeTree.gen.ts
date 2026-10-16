@@ -22,6 +22,7 @@ import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GoodreadsMarketingRouteImport } from './routes/goodreads-marketing'
+import { Route as HowToBuildAnAuthorCommunityRouteImport } from './routes/how-to-build-an-author-community'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ResourcesRouteImport } from './routes/resources'
@@ -97,6 +98,12 @@ const GoodreadsMarketingRoute = GoodreadsMarketingRouteImport.update({
   path: '/goodreads-marketing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowToBuildAnAuthorCommunityRoute =
+  HowToBuildAnAuthorCommunityRouteImport.update({
+    id: '/how-to-build-an-author-community',
+    path: '/how-to-build-an-author-community',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -157,6 +164,7 @@ export interface FileRoutesByFullPath {
   '/disclaimer': typeof DisclaimerRoute
   '/faq': typeof FaqRoute
   '/goodreads-marketing': typeof GoodreadsMarketingRoute
+  '/how-to-build-an-author-community': typeof HowToBuildAnAuthorCommunityRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/resources': typeof ResourcesRoute
@@ -181,6 +189,7 @@ export interface FileRoutesByTo {
   '/disclaimer': typeof DisclaimerRoute
   '/faq': typeof FaqRoute
   '/goodreads-marketing': typeof GoodreadsMarketingRoute
+  '/how-to-build-an-author-community': typeof HowToBuildAnAuthorCommunityRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/resources': typeof ResourcesRoute
@@ -206,6 +215,7 @@ export interface FileRoutesById {
   '/disclaimer': typeof DisclaimerRoute
   '/faq': typeof FaqRoute
   '/goodreads-marketing': typeof GoodreadsMarketingRoute
+  '/how-to-build-an-author-community': typeof HowToBuildAnAuthorCommunityRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/resources': typeof ResourcesRoute
@@ -232,6 +242,7 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/faq'
     | '/goodreads-marketing'
+    | '/how-to-build-an-author-community'
     | '/pricing'
     | '/privacy-policy'
     | '/resources'
@@ -256,6 +267,7 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/faq'
     | '/goodreads-marketing'
+    | '/how-to-build-an-author-community'
     | '/pricing'
     | '/privacy-policy'
     | '/resources'
@@ -280,6 +292,7 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/faq'
     | '/goodreads-marketing'
+    | '/how-to-build-an-author-community'
     | '/pricing'
     | '/privacy-policy'
     | '/resources'
@@ -305,6 +318,7 @@ export interface RootRouteChildren {
   DisclaimerRoute: typeof DisclaimerRoute
   FaqRoute: typeof FaqRoute
   GoodreadsMarketingRoute: typeof GoodreadsMarketingRoute
+  HowToBuildAnAuthorCommunityRoute: typeof HowToBuildAnAuthorCommunityRoute
   PricingRoute: typeof PricingRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ResourcesRoute: typeof ResourcesRoute
@@ -409,6 +423,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GoodreadsMarketingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/how-to-build-an-author-community': {
+      id: '/how-to-build-an-author-community'
+      path: '/how-to-build-an-author-community'
+      fullPath: '/how-to-build-an-author-community'
+      preLoaderRoute: typeof HowToBuildAnAuthorCommunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pricing': {
       id: '/pricing'
       path: '/pricing'
@@ -489,6 +510,7 @@ const rootRouteChildren: RootRouteChildren = {
   DisclaimerRoute: DisclaimerRoute,
   FaqRoute: FaqRoute,
   GoodreadsMarketingRoute: GoodreadsMarketingRoute,
+  HowToBuildAnAuthorCommunityRoute: HowToBuildAnAuthorCommunityRoute,
   PricingRoute: PricingRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ResourcesRoute: ResourcesRoute,
