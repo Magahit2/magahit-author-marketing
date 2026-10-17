@@ -129,7 +129,7 @@ export function Footer() {
               Terms &amp; Conditions
             </Link>
             <Link to="/how-to-build-an-author-community" className="hover:text-ink-foreground">
-              BAC Policy
+              BAC
             </Link>
             <Link to="/disclaimer" className="hover:text-ink-foreground">
               Disclaimer
