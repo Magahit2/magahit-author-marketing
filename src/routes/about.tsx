@@ -186,8 +186,10 @@ function About() {
               alt="Emmanuel Ola, founder of Magahit Author Marketing, in a burgundy suit"
               width={768}
               height={1344}
-              loading="lazy"
-              className="relative aspect-square w-full object-cover object-[center_20%] shadow-editorial"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="relative aspect-square w-full bg-secondary object-cover object-[center_15%] shadow-editorial"
             />
           </div>
           <div className="order-1 lg:order-2">
