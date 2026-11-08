@@ -182,7 +182,7 @@ function About() {
           <div className="relative order-2 lg:order-1">
             <div className="absolute -left-4 -top-4 hidden h-full w-full border border-gold/40 lg:block" />
             <img
-              src={founderAsset.url}
+              src={new URL(founderAsset.url, "https://magahit-author-marketing.lovable.app").href}
               alt="Emmanuel Ola, founder of Magahit Author Marketing, in a burgundy suit"
               width={768}
               height={1344}
