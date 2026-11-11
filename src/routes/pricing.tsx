@@ -9,7 +9,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/site/blocks";
-import { COMPARISON, PACKAGES } from "@/content/site";
+import { BRAND, COMPARISON, PACKAGES } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/pricing")({
@@ -92,9 +92,7 @@ function Pricing() {
                 </div>
 
                 <div className="mt-8 flex-1" />
-                <Cta to={p.price === "Custom" ? "/work-with-us" : "/book-audit"}>
-                  {p.price === "Custom" ? "Apply to Work With Us" : "Get Your Book Audit"}
-                </Cta>
+                <Cta to={BRAND.whatsapp}>Proceed on WhatsApp</Cta>
               </div>
             </Reveal>
           ))}
@@ -105,7 +103,7 @@ function Pricing() {
         <SectionHeading
           eyebrow="Compare"
           title="What's Included in Each Package"
-          intro="A side-by-side view of the three fixed packages. Custom engagements are scoped individually."
+          intro="A side-by-side view of the three paid packages. The Free Package and custom engagements are scoped individually."
         />
         <div className="mt-12 overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-left">

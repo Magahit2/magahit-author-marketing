@@ -27,3 +27,9 @@
 - [x] Render the reader-acquisition journey as a clear five-stage diagram
 - [x] Place the article link in the footer between Terms & Conditions and Disclaimer
 - [x] Add route-specific SEO metadata and verify the page and footer link
+
+## Done: Free Package on Pricing
+- [x] Add Free Package (Complete Author Website, Professional Online Setup, 10 targeted Goodreads Listopia lists, five promotional quote/graphic designs)
+- [x] Point every package button to WhatsApp https://wa.me/12267087341
+- [x] Support external links in the shared button component
+- [x] Verify all five cards, buttons, and mobile layout

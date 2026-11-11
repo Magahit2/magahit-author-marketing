@@ -161,6 +161,20 @@ export const SERVICE_GROUPS = [
 
 export const PACKAGES = [
   {
+    name: "Free Package",
+    price: "Free",
+    tagline: "A complete author presence online, at no cost.",
+    who: "Authors who need a professional website, Goodreads visibility, and promotional assets in place before spending on marketing.",
+    timeline: "One-time setup",
+    features: [
+      "Complete Author Website",
+      "Professional Online Setup",
+      "10 Targeted Goodreads Listopia Lists you can add your book to",
+      "Five Promotional Quote / Graphic Designs",
+    ],
+    featured: false,
+  },
+  {
     name: "Starter",
     price: "$497",
     tagline: "For authors who need a focused marketing foundation.",

@@ -142,8 +142,16 @@ export function Cta({ to, children, variant = "solid", className }: CtaProps) {
     gold: "bg-gold text-gold-foreground hover:bg-gold/85 hover:shadow-lift",
     ghost: "text-primary hover:opacity-70",
   } as const;
+  const classes = cn(base, variants[variant], className);
+  if (/^https?:\/\//i.test(to)) {
+    return (
+      <a href={to} target="_blank" rel="noopener noreferrer" className={classes}>
+        {children}
+      </a>
+    );
+  }
   return (
-    <Link to={to} className={cn(base, variants[variant], className)}>
+    <Link to={to} className={classes}>
       {children}
     </Link>
   );
