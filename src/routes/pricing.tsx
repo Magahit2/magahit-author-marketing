@@ -92,7 +92,7 @@ function Pricing() {
                 </div>
 
                 <div className="mt-8 flex-1" />
-                <Cta to={BRAND.whatsapp}>Proceed on WhatsApp</Cta>
+                <Cta to={BRAND.whatsapp}>Click To Proceed</Cta>
               </div>
             </Reveal>
           ))}
