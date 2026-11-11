@@ -168,7 +168,7 @@ export const PACKAGES = [
     timeline: "One-time setup",
     features: [
       "Complete Author Website",
-      "Professional Online Setup",
+      "Professional Author Online Presence Setup",
       "6-8 Targeted Goodreads Listopia Lists you can add your book to",
       "Five Promotional Quote / Graphic Designs",
     ],
