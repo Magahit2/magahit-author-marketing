@@ -169,7 +169,7 @@ export const PACKAGES = [
     features: [
       "Complete Author Website",
       "Professional Online Setup",
-      "10 Targeted Goodreads Listopia Lists you can add your book to",
+      "6-8 Targeted Goodreads Listopia Lists you can add your book to",
       "Five Promotional Quote / Graphic Designs",
     ],
     featured: false,
