@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronDown, Clapperboard } from "lucide-react";
-import { CheckList, PageHero, Reveal, Section, SectionHeading } from "@/components/site/blocks";
+import { CheckList, Cta, PageHero, Reveal, Section, SectionHeading } from "@/components/site/blocks";
 import { BRAND, GENRES } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 const URL_BASE = "https://magahit-author-marketing.lovable.app/book-trailer-packages";
+const TRAILER_SHOWREEL = "https://vt.tiktok.com/ZSsYkHCTs/";
 
 export const Route = createFileRoute("/book-trailer-packages")({
   head: () => ({
@@ -66,7 +67,7 @@ const PACKAGES: Pkg[] = [
   {
     name: "Essential Trailer",
     label: "Starter Package",
-    price: "$99–$149",
+    price: "$99",
     description: "A simple and engaging introduction to your book.",
     features: [
       "30–45-second book trailer",
@@ -88,7 +89,7 @@ const PACKAGES: Pkg[] = [
   {
     name: "Professional Trailer",
     label: "Most Popular",
-    price: "$199–$299",
+    price: "$199",
     description: "A cinematic presentation designed to capture attention and spark curiosity.",
     features: [
       "45–60-second book trailer",
@@ -112,7 +113,7 @@ const PACKAGES: Pkg[] = [
   {
     name: "Cinematic Premium Trailer",
     label: "Premium Experience",
-    price: "$399–$599",
+    price: "$399",
     description:
       "A complete cinematic experience for authors who want a more developed promotional video.",
     features: [
@@ -153,7 +154,16 @@ const inputClass =
 const labelClass =
   "text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-muted-foreground";
 
-function PackageCard({ p, onSelect }: { p: Pkg; onSelect: (name: string) => void }) {
+function trailerEnquiry(p: Pkg) {
+  const text = [
+    "Book Trailer Enquiry",
+    `Selected package: ${p.name}`,
+    `Package price: ${p.price}`,
+  ].join("\n");
+  return `${BRAND.whatsapp}?text=${encodeURIComponent(text)}`;
+}
+
+function PackageCard({ p }: { p: Pkg }) {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -210,9 +220,10 @@ function PackageCard({ p, onSelect }: { p: Pkg; onSelect: (name: string) => void
       ) : null}
 
       <div className="mt-8 flex-1" />
-      <button
-        type="button"
-        onClick={() => onSelect(p.name)}
+      <a
+        href={trailerEnquiry(p)}
+        target="_blank"
+        rel="noopener noreferrer"
         className={cn(
           "inline-flex min-h-11 items-center justify-center rounded-sm px-6 py-3.5 text-[0.75rem] font-semibold uppercase tracking-[0.14em] transition-all duration-300 hover:shadow-lift",
           p.variant === "premium" || p.variant === "free"
@@ -221,18 +232,13 @@ function PackageCard({ p, onSelect }: { p: Pkg; onSelect: (name: string) => void
         )}
       >
         {p.cta}
-      </button>
+      </a>
     </div>
   );
 }
 
 function BookTrailerPackages() {
   const [selected, setSelected] = useState("");
-
-  const select = (name: string) => {
-    setSelected(name);
-    document.getElementById("trailer-enquiry")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -277,9 +283,27 @@ function BookTrailerPackages() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {PACKAGES.map((p, i) => (
             <Reveal key={p.name} delay={i * 70} className="h-full">
-              <PackageCard p={p} onSelect={select} />
+              <PackageCard p={p} />
             </Reveal>
           ))}
+        </div>
+      </Section>
+
+      <Section tone="ink">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="eyebrow text-gold">Previous Work</p>
+          <h2 className="display-2 mt-5 text-ink-foreground">See Our Previous Book Trailers</h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink-foreground/70 sm:text-lg">
+            If you want to check some of our previous book trailers, click the button below to watch them.
+          </p>
+          <div className="mt-10 flex justify-center">
+            <Cta to={TRAILER_SHOWREEL} variant="gold">
+              <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3 0 .6.05.88.13v-3.5a6.41 6.41 0 0 0-1-.05A6.34 6.34 0 0 0 5 20.1a6.34 6.34 0 0 0 10.45-4.79V8.83a8.16 8.16 0 0 0 4.77 1.52V6.9a4.85 4.85 0 0 1-.63-.21z" />
+              </svg>
+              Watch Previous Book Trailers
+            </Cta>
+          </div>
         </div>
       </Section>
 
@@ -353,8 +377,8 @@ function BookTrailerPackages() {
             Send Enquiry on WhatsApp
           </button>
           <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-            Free trial requests are subject to review and approval. Prices are shown as ranges; your final quote is
-            confirmed after we review your book.
+            Free trial requests are subject to review and approval. Your final quote is confirmed after we
+            review your book.
           </p>
         </form>
       </Section>

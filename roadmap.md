@@ -37,3 +37,6 @@
 ## Done: Book Trailer Packages
 - [x] /book-trailer-packages page, four packages, add-ons, WhatsApp enquiry form
 - [x] BTP footer link under Free Book Audit
+- [x] Every package button opens WhatsApp with the package and price pre-filled
+- [x] Flat prices ($99, $199, $399) — no ranges
+- [x] "See Our Previous Book Trailers" section linked to https://vt.tiktok.com/ZSsYkHCTs/
