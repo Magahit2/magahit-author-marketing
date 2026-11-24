@@ -39,6 +39,7 @@ const COLUMNS = [
       { label: "Blog", to: "/blog" },
       { label: "Guides", to: "/resources" },
       { label: "Free Book Audit", to: "/book-audit" },
+      { label: "BTP", to: "/book-trailer-packages" },
       { label: "FAQ", to: "/faq" },
       { label: "Pricing", to: "/pricing" },
     ],

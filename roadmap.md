@@ -33,3 +33,7 @@
 - [x] Point every package button to WhatsApp https://wa.me/12267087341
 - [x] Support external links in the shared button component
 - [x] Verify all five cards, buttons, and mobile layout
+
+## Done: Book Trailer Packages
+- [x] /book-trailer-packages page, four packages, add-ons, WhatsApp enquiry form
+- [x] BTP footer link under Free Book Audit

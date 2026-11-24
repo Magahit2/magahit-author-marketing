@@ -17,6 +17,7 @@ import { Route as AuthorWebsiteRouteImport } from './routes/author-website'
 import { Route as BookAuditRouteImport } from './routes/book-audit'
 import { Route as BookLaunchRouteImport } from './routes/book-launch'
 import { Route as BookMarketingRouteImport } from './routes/book-marketing'
+import { Route as BookTrailerPackagesRouteImport } from './routes/book-trailer-packages'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
@@ -71,6 +72,11 @@ const BookLaunchRoute = BookLaunchRouteImport.update({
 const BookMarketingRoute = BookMarketingRouteImport.update({
   id: '/book-marketing',
   path: '/book-marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookTrailerPackagesRoute = BookTrailerPackagesRouteImport.update({
+  id: '/book-trailer-packages',
+  path: '/book-trailer-packages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -159,6 +165,7 @@ export interface FileRoutesByFullPath {
   '/book-audit': typeof BookAuditRoute
   '/book-launch': typeof BookLaunchRoute
   '/book-marketing': typeof BookMarketingRoute
+  '/book-trailer-packages': typeof BookTrailerPackagesRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
@@ -184,6 +191,7 @@ export interface FileRoutesByTo {
   '/book-audit': typeof BookAuditRoute
   '/book-launch': typeof BookLaunchRoute
   '/book-marketing': typeof BookMarketingRoute
+  '/book-trailer-packages': typeof BookTrailerPackagesRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
@@ -210,6 +218,7 @@ export interface FileRoutesById {
   '/book-audit': typeof BookAuditRoute
   '/book-launch': typeof BookLaunchRoute
   '/book-marketing': typeof BookMarketingRoute
+  '/book-trailer-packages': typeof BookTrailerPackagesRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/disclaimer': typeof DisclaimerRoute
@@ -237,6 +246,7 @@ export interface FileRouteTypes {
     | '/book-audit'
     | '/book-launch'
     | '/book-marketing'
+    | '/book-trailer-packages'
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
@@ -262,6 +272,7 @@ export interface FileRouteTypes {
     | '/book-audit'
     | '/book-launch'
     | '/book-marketing'
+    | '/book-trailer-packages'
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
@@ -287,6 +298,7 @@ export interface FileRouteTypes {
     | '/book-audit'
     | '/book-launch'
     | '/book-marketing'
+    | '/book-trailer-packages'
     | '/contact'
     | '/cookie-policy'
     | '/disclaimer'
@@ -313,6 +325,7 @@ export interface RootRouteChildren {
   BookAuditRoute: typeof BookAuditRoute
   BookLaunchRoute: typeof BookLaunchRoute
   BookMarketingRoute: typeof BookMarketingRoute
+  BookTrailerPackagesRoute: typeof BookTrailerPackagesRoute
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DisclaimerRoute: typeof DisclaimerRoute
@@ -386,6 +399,13 @@ declare module '@tanstack/react-router' {
       path: '/book-marketing'
       fullPath: '/book-marketing'
       preLoaderRoute: typeof BookMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-trailer-packages': {
+      id: '/book-trailer-packages'
+      path: '/book-trailer-packages'
+      fullPath: '/book-trailer-packages'
+      preLoaderRoute: typeof BookTrailerPackagesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -505,6 +525,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookAuditRoute: BookAuditRoute,
   BookLaunchRoute: BookLaunchRoute,
   BookMarketingRoute: BookMarketingRoute,
+  BookTrailerPackagesRoute: BookTrailerPackagesRoute,
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DisclaimerRoute: DisclaimerRoute,
